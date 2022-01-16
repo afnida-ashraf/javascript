@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <label for="">enter first number</label>
+   <input type="number" name="" id="n1" placeholder="first number" onkeypress="return onlyNumberKey(event)"> <br> <br>
+   <label for="">enter second number</label>
+   <input type="number" name="" id="n2" placeholder="second number" onkeypress="return onlyNumberKey(event)"> <br> <br>
+   <label for="">result</label>
+   <input type="text" name="" id="r" readonly> <br><br>
+
+   <button onclick="add()">+</button>
+   <button onclick="sub()">-</button>
+   <button onclick="mul()">*</button>
+   <button onclick="div()">/</button>
+   <script>
+
+       function onlyNumberKey(evt){
+           var ASCIICode= (evt.which) ? evt.which : evt.KeyCode
+           if(ASCIICode>31&&(ASCIICode<48||ASCIICode>57))
+                return false
+                return true
+
+       }
+       function add(){
+           n1=document.getElementById("n1").value
+           n2=document.getElementById("n2").value
+           r=parseInt(n1)+parseInt(n2)
+           document.getElementById("r").innerHTML="result="+r
+
+        }
+        function sub(){
+           n1=document.getElementById("n1").value
+           n2=document.getElementById("n2").value
+           r=parseInt(n1)-parseInt(n2)
+           document.getElementById("r").innerHTML="result="+r
+
+        }
+        function mul(){
+           n1=document.getElementById("n1").value
+           n2=document.getElementById("n2").value
+           r=parseInt(n1)*parseInt(n2)
+           document.getElementById("r").innerHTML="result="+r
+
+        }
+        function div(){
+           n1=document.getElementById("n1").value
+           n2=document.getElementById("n2").value
+           r=parseInt(n1)/parseInt(n2)
+           document.getElementById("r").innerHTML="result="+r
+
+        }
+   </script>
+</body>
+</html>

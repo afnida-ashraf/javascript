@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_ogj</title>
+</head>
+<body>
+
+    <!-- reset submit () -->
+    <form id="myForm" method="get">
+        First name: <input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br><br>
+        <input type="button" onclick="freset()" value="Reset form">
+        <input type="button" onclick="fsubmit()" value="submit form">
+
+      </form>
+    <script>
+      function freset(){
+          document.getElementById("myForm").reset()
+
+      }
+      function fsubmit(){
+        document.getElementById("myForm").submit()
+      }
+    
+    
+    </script>
+
+    
+</body>
+</html>

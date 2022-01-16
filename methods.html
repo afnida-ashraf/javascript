@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="myForm" method="get">
+         <input type="text" name="fname"  id="name" value="Afnida Ashraf"><br>
+       
+        <input type="button" onclick="fnfocus()" value="focus">
+        <input type="button" onclick="fblur()" value="blur"> 
+        <input type="button" onclick="fnselect()" value="select">
+
+      </form>
+      <script>
+          function fnfocus(){
+            document.getElementById("name").focus()
+            document.getElementById("name").style.color="red"
+          }
+          function fblur(){
+              document.getElementById("name").blur()
+              document.getElementById("name").style.color="blaCK"
+
+          }
+          function fnselect(){
+              document.getElementById("name").select()
+              alert("selected")
+          }    
+
+      </script>
+   
+
+    <!-- <input type="text" onfocus="alert('hello')"> 
+    <input type="text" onblur="alert('hello')">
+    <input type="text" onselect="alert('hello')">
+    <input type="text" onchange="alert('hello')"> -->
+</body>
+</html>   
